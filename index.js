@@ -10,7 +10,7 @@ const Shoe = require("./router/shoeRouter");
 const Brand = require("./router/brandRouter");
 const Account = require("./router/accountRouter");
 const Order = require("./router/orderRouter");
-export const maxDuration = 30000;
+
 dotenv.config();
 // Kết nối CSDL
 async function ConnectDB() {
