@@ -1,28 +1,31 @@
 const mongoose = require("mongoose");
 
 const shoeSchema = new mongoose.Schema({
-    NameShoe:{
-        type: String,
-        require:true
-    },
-    Price:{
-        type: Number,
-        require:true
-    },
-    Size:{
-        type: Number,
-        require:true
-    },
-    Image:{
-        type: String,
-        require:true
-    },
-    Brand:{
-        type:mongoose.Types.ObjectId,
-        ref: "Brand"
-    }
-
+  NameShoe: {
+    type: String,
+    required: true,
+  },
+  Price: {
+    type: Number,
+    required: true,
+  },
+  Description: {
+    type: String,
+    required: true,
+  },
+  Image: {
+    type: String,
+    required: true,
+  },
+  Brand: {
+    type: String,
+    required: true,
+  },
+  Sizes: {
+    type: [Number],
+    required: true,
+  },
 });
-    
-let Shoe = mongoose.model("Shoe",shoeSchema);
-module.exports = {Shoe};
+
+let Shoe = mongoose.model("Shoe", shoeSchema);
+module.exports = { Shoe };
