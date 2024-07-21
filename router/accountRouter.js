@@ -3,6 +3,6 @@ const router = require("express").Router();
 
 router.get("/",AccountController.getAllAccount);
 router.post("/",AccountController.postAccount);
-router.put("/:id",AccountController.editAccount);
+router.put("/:id",AccountController.editAcount);
 
-module.exports = router;
+module.exports = router;S
