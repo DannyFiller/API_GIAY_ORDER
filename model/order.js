@@ -20,7 +20,12 @@ const orderSchema =  new mongoose.Schema({
     NameUser: {
         type: String,
         require:true,
-    }
+    },
+    Email: {
+        type: String,
+        require:true,
+    },
+    
 });
 
 const Order = mongoose.model('Order', orderSchema);
