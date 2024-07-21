@@ -22,15 +22,16 @@ const AccountController ={
         }
     },
 
-    editAccount: async (req, res) => {
+    editShoe: async (req, res) => {
         try {
-          const accUpdate = await Account.findById(req.params.id);
-          await accUpdate.updateOne({ $set: req.body });
-          res.status(200).json(accUpdate);
+          const accountUpdate = await Account.findById(req.params.id);
+          await accountUpdate.updateOne({ $set: req.body });
+          res.status(200).json(accountUpdate);
         } catch (error) {
           res.status(200).json(error);
         }
       },
+    
 }
 
 module.exports=AccountController;
