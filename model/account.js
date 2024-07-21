@@ -10,8 +10,14 @@ const accountSchema = new mongoose.Schema({
     UserName:{
         type : String
     },
+    Address:{
+        type : String
+    },
     PhoneNumber:{
         type : Number
+    },
+    BirthDay:{
+        type : Date
     },
 });
 
