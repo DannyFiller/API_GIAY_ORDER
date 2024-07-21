@@ -19,6 +19,9 @@ const accountSchema = new mongoose.Schema({
     BirthDay:{
         type : Date
     },
+    Image:{
+        type : String
+    },
 });
 
 let Account = mongoose.model("Account",accountSchema);
