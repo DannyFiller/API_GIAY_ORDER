@@ -3,6 +3,6 @@ const router = require("express").Router();
 
 router.get("/",AccountController.getAllAccount);
 router.post("/",AccountController.postAccount);
-router.put("/:id",AccountController.editAcount);
+router.get("/:email",AccountController.getAccount);
 
 module.exports = router;

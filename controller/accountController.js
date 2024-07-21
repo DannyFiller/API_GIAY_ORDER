@@ -20,6 +20,18 @@ const AccountController ={
             res.status(500).json(error);
         }
     },
+    getAccount: async(req,res)=>{
+        try {
+            const account = await Account.findOne({ Email: req.params.email });
+            if (account) {
+              res.status(200).json(account);
+            } else {
+              res.status(404).json({ message: 'Account not found' });
+            }
+          } catch (error) {
+            res.status(500).json({ error: error.message });
+          }
+    },
     editAcount: async (req, res) => {
         try {
           const accountUpdate = await Account.findById(req.params.id);
