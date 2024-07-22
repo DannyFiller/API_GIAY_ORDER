@@ -22,11 +22,11 @@ const orderSchema =  new mongoose.Schema({
         require:true,
     },
     Email: {
-        type: Date,
+        type: String,
         require:true,
     },
     DateOrder: {
-        type: String,
+        type: Date,
         require:true,
     },
     Price: {
