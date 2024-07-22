@@ -22,7 +22,15 @@ const orderSchema =  new mongoose.Schema({
         require:true,
     },
     Email: {
+        type: Date,
+        require:true,
+    },
+    DateOrder: {
         type: String,
+        require:true,
+    },
+    Price: {
+        type: Number,
         require:true,
     },
     
