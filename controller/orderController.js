@@ -13,7 +13,7 @@ const OrderController ={
 
     getOrderByEmail: async(req,res) =>{
         try {
-            const order = await Order.find({ Email: req.params.email });
+            const order = await Order.find({ Email: req.params.email }).populate("Items.Shoe");
             if (order) {
               res.status(200).json(order);
             } else {
